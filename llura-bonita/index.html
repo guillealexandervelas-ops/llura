@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Para mi Llura bonita</title>
+<meta name="description" content="Un rincón hecho con amor para Llura bonita: fotos, vídeos y momentos de nuestra historia." />
+<meta property="og:title" content="Para mi Llura bonita" />
+<meta property="og:description" content="Un rincón hecho con amor para Llura bonita." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============= INTRO VIDEO (opcional) =============
+     Sustituye el src del <video> por tu vídeo (intro.mp4).
+     Al pulsar "Vamos allá" se oculta y aparece la web. -->
+<section id="intro" class="intro">
+  <video id="intro-video" class="intro-video" playsinline muted controls preload="metadata">
+    <source src="intro.mp4#t=0.1" type="video/mp4" />
+  </video>
+  <button id="enter-btn" class="enter-btn" type="button">Vamos allá</button>
+</section>
+
+<main id="site" class="site hidden">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="petals" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">Para ti, mi amor</p>
+      <h1 class="script title">Llura bonita</h1>
+      <p class="lead">Un pequeño rincón hecho con amor, para guardar nuestros momentos y recordarte cada día cuánto te quiero.</p>
+      <div class="chev">▾</div>
+    </div>
+  </section>
+
+  <!-- DEDICACIÓN -->
+  <section class="container narrow center pad">
+    <h2 class="script h2">Mi vida contigo</h2>
+    <div class="ornament"><span></span>♥<span></span></div>
+    <p class="serif body-lg">Desde el primer día que te miré supe que algo en mi mundo había cambiado para siempre. Esta web es solo una pequeña forma de decirte gracias por cada risa, cada abrazo y cada "te quiero" que hemos compartido.</p>
+  </section>
+
+  <!-- MOSAICO A -->
+  <section class="pad">
+    <div class="container narrow center">
+      <h2 class="script h2">Nuestros momentos</h2>
+      <p class="serif muted">Las fotos que me hacen volver a ti</p>
+    </div>
+    <div class="grid grid-photos" id="mosaic-a"></div>
+  </section>
+
+  <!-- CITA -->
+  <section class="quote pad">
+    <div class="heart float">♥</div>
+    <p class="script quote-text">"Te elegiría una y mil veces. Siempre tú."</p>
+    <p class="eyebrow">— Para ti, Llura</p>
+  </section>
+
+  <!-- VÍDEOS -->
+  <section class="pad">
+    <div class="container narrow center">
+      <h2 class="script h2">Momentos en movimiento</h2>
+      <p class="serif muted">Porque hay sonrisas que ninguna foto puede capturar</p>
+    </div>
+    <div class="grid grid-videos" id="videos-grid"></div>
+  </section>
+
+  <!-- MINIJUEGO -->
+  <section class="pad">
+    <div class="container narrow center">
+      <h2 class="script h2">Atrapa los corazones</h2>
+      <p class="serif muted">Toca todos los corazoncitos que puedas en 30 segundos 💖</p>
+    </div>
+    <div class="container">
+      <div class="game-wrap">
+        <div class="game-hud">
+          <span>💗 <b id="game-score">0</b></span>
+          <span>⏱ <b id="game-time">30s</b></span>
+          <button id="game-start" type="button" class="enter-btn small">Empezar</button>
+        </div>
+        <canvas id="game-canvas" class="game-canvas" aria-label="Minijuego de corazones"></canvas>
+        <p id="game-message" class="serif game-msg"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- POLAROIDS -->
+  <section class="pad alt">
+    <div class="container narrow center">
+      <h2 class="script h2">Pequeños detalles</h2>
+      <p class="serif muted">Esos instantes que se quedan para siempre</p>
+    </div>
+    <div class="grid grid-polaroid" id="polaroids"></div>
+  </section>
+
+  <!-- CITA 2 -->
+  <section class="quote pad">
+    <div class="heart float">♥</div>
+    <p class="script quote-text">Como ultimo, porfavor id a la cumpleañera y decidle el porque la quereis, (ella no se cree que sea asi)</p>
+    <p class="eyebrow"></p>
+  </section>
+
+  <!-- CIERRE -->
+  <section class="closing pad">
+    <div class="petals" aria-hidden="true"></div>
+    <div class="closing-inner">
+      <p class="eyebrow">Y esto es solo el principio</p>
+      <h2 class="script title">Te amo, Focachabonita</h2>
+      <p class="serif body-lg">Hoy, mañana y todos los días que me dejes seguir a tu lado.</p>
+      <p class="script signature">— tuyo, siempre, tu focacho</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="heart">♥</div>
+    <p class="serif muted">Hecho con amor, para una foquita que me robo el corazon, por ahi un hallowen(que se lo quede esta mejor con ella) · <span id="year"></span></p>
+  </footer>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true">
+  <button class="lb-close" id="lb-close" aria-label="Cerrar">✕</button>
+  <img id="lb-img" alt="" />
+  <p id="lb-caption" class="script"></p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
