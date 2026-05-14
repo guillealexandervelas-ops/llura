@@ -371,4 +371,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
   renderPetals();
   setupGame();
   setupLightbox();
-});
+});ss
