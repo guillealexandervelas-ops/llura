@@ -342,6 +342,12 @@ function setupLightbox(){
 function setupIntro(){
   const intro = document.getElementById("intro");
   const site = document.getElementById("site");
+  const video = document.getElementById("intro-video");
+
+  // Intentar reproducir el vídeo automáticamente
+  if (video) {
+    video.play().catch(e => console.log("Auto-play prevenido por el navegador"));
+  }
 
   document.getElementById("enter-btn").onclick = ()=>{
     intro.style.opacity = "0";
@@ -371,4 +377,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
   renderPetals();
   setupGame();
   setupLightbox();
-});ss
+});
